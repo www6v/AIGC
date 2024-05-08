@@ -11,10 +11,18 @@ import autogen
 #     },
 # )
 
+
+config_list = [
+    {
+        'model': 'gpt-3.5-turbo',
+        'api_key': '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',#输入用户自己的api_key
+    }
+]
+
 llm_config = {
     "timeout": 600,
     "cache_seed": 42,
-    "config_list": [{"model": "gpt-3.5-turbo", "api_key": ""}], ##### 
+    "config_list": config_list, 
     "temperature": 0,
 }
 
