@@ -15,7 +15,7 @@ import autogen
 config_list = [
     {
         'model': 'gpt-3.5-turbo',
-        'api_key': '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',#输入用户自己的api_key
+        'api_key': '',#输入用户自己的api_key
     }
 ]
 
