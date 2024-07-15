@@ -10,3 +10,6 @@ from modelscope.hub.snapshot_download import snapshot_download
 
 model_dir = snapshot_download('ZhipuAI/chatglm2-6b-int4', cache_dir='./model', revision='master')
 
+
+
+model_dir = snapshot_download('LLM-Research/Meta-Llama-3-8B-Instruct', cache_dir='./model', revision='master')
