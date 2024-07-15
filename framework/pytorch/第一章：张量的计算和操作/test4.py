@@ -56,17 +56,17 @@ print ("把y加权求和",x.grad)
 
 
 # 需要计算梯度-requires_grad=True
-# w = torch.tensor([1.], requires_grad=True)
-# x = torch.tensor([2.])
-# # 前向传播
-# a = torch.add(w, x)     
-# #a.retain_grad()
-# b = torch.add(w, 1)
-# y = torch.mul(a, b)
-# # 反向传播-自动求导
-# y.backward(retain_graph=True)
-# print (w._grad)
-# w.grad.zero_()
-# y.backward()
-# print (w._grad)
+w = torch.tensor([1.], requires_grad=True)
+x = torch.tensor([2.])
+# 前向传播
+a = torch.add(w, x)     
+#a.retain_grad()
+b = torch.add(w, 1)
+y = torch.mul(a, b)
+# 反向传播-自动求导
+y.backward(retain_graph=True)
+print (w._grad)
+w.grad.zero_()
+y.backward()
+print (w._grad)
  
