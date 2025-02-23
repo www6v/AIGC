@@ -20,7 +20,13 @@ model_dir = snapshot_download('deepseek-ai/DeepSeek-R1-Distill-Qwen-7B', cache_d
 ##### dataset 加载数据集
 dataset_dir = snapshot_download('', cache_dir='./dataset', revision='master')
 
+### 好像有问题
+#  modelscope download --dataset 'FreedomIntelligence/medical-o1-reasoning-SFT'  --local_dir './dataset'
+#  modelscope download --dataset 'FreedomIntelligence/medical-o1-reasoning-SFT' --include 'data/train-000*' --cache_dir './cache_dir'
 
-#  modelscope download --dataset 'FreedomIntelligence/medical-o1-reasoning-SFT'  --local_dir './local_dir'
+### 这个没问题
+# modelscope download --dataset 'FreedomIntelligence/medical-o1-reasoning-SFT'  --cache_dir './cache_dir'
 
-ds = MsDataset.load('afqmc_small', split='train')
+### 好像有问题
+ds = MsDataset.load('FreedomIntelligence/medical-o1-reasoning-SFT', cache_dir='./dataset', split='train')
+ds = MsDataset.load('FreedomIntelligence/medical-o1-reasoning-SFT', cache_dir='./dataset')
