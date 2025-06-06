@@ -27,3 +27,5 @@ query: 我的名字是什么
 ### 参考
 https://github.com/www6v/LangGraphChatBot
 
+up: 南哥
+
